@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>System status — Finrock</title>
+<meta name="description" content="Real-time status of every Finrock service. 99.97% uptime over the last 90 days." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div data-nav></div>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="pill"><span class="dot"></span> Status</span>
+    <h1>All systems<br/><span style="background: linear-gradient(135deg, #0a0a0a, var(--pos)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">operational</span>.</h1>
+    <p class="sub">Last updated 2 minutes ago · 99.97% uptime over the last 90 days.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="max-width: 880px;">
+    <div style="background: var(--surface); border: 1px solid var(--hair-2); border-radius: 18px; overflow: hidden;">
+    ${[
+      ['API · Core', 'Operational', '99.99%', 'pos'],
+      ['Bank sync · Open Banking', 'Operational', '99.96%', 'pos'],
+      ['HMRC MTD submission', 'Operational', '99.92%', 'pos'],
+      ['Receipt OCR · AI', 'Operational', '99.98%', 'pos'],
+      ['Document Vault · AES-256', 'Operational', '100.00%', 'pos'],
+      ['Stripe payment processing', 'Operational', '99.99%', 'pos'],
+      ['Email · Resend', 'Operational', '99.95%', 'pos'],
+      ['Mobile apps · iOS &amp; Android', 'Operational', '99.99%', 'pos'],
+    ].map(([n, s, u, t]) => `
+      <div style="display: grid; grid-template-columns: 2fr 1fr 100px; gap: 14px; padding: 18px 22px; border-bottom: 1px solid var(--hair); align-items: center;">
+        <div style="font-size: 15px; font-weight: 500;">${n}</div>
+        <div style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px;">
+          <span style="width: 8px; height: 8px; border-radius: 4px; background: var(--pos); box-shadow: 0 0 0 3px rgba(15,124,58,0.20);"></span>
+          ${s}
+        </div>
+        <div style="font-size: 13px; color: var(--text-3); text-align: right; font-variant-numeric: tabular-nums;">${u} · 90d</div>
+      </div>
+    `).join('')}
+    </div>
+
+    <h2 style="font-size: 22px; font-weight: 700; margin: 56px 0 18px;">Recent incidents</h2>
+    <div style="display: flex; flex-direction: column; gap: 14px;">
+      <div style="padding: 20px 22px; background: var(--surface); border: 1px solid var(--hair); border-radius: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <div style="font-size: 14px; font-weight: 600;">Brief degradation · Bank sync delay</div>
+          <div style="font-size: 12px; color: var(--text-3);">May 18, 2026 · 14:22 → 14:37 BST · Resolved</div>
+        </div>
+        <p style="margin: 0; color: var(--text-2); font-size: 13.5px; line-height: 1.55;">15 minutes of slow response times on bank-sync API due to upstream provider issue. No data lost. Transactions caught up automatically.</p>
+      </div>
+      <div style="padding: 20px 22px; background: var(--surface); border: 1px solid var(--hair); border-radius: 14px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <div style="font-size: 14px; font-weight: 600;">Scheduled maintenance · HMRC submission</div>
+          <div style="font-size: 12px; color: var(--text-3);">May 4, 2026 · 02:00 → 04:00 BST · Resolved</div>
+        </div>
+        <p style="margin: 0; color: var(--text-2); font-size: 13.5px; line-height: 1.55;">Planned upgrade to HMRC MTD module. No customer impact — submissions queued and processed after window.</p>
+      </div>
+    </div>
+
+    <p style="margin-top: 28px; color: var(--text-3); font-size: 13.5px; text-align: center;">Subscribe to status updates by email · RSS feed at <a href="#" style="color: var(--brand); font-weight: 600;">status.gofinrock.com/feed.rss</a></p>
+  </div>
+</section>
+
+<div data-footer></div>
+<script src="chrome.js"></script>
+</body>
+</html>
