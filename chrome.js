@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="nav-links">
             ${link('personal.html', 'Personal')}
             ${link('business.html', 'Business')}
+            ${link('side-hustlers.html', 'Side hustle')}
             ${link('accountants.html', 'Accountants')}
             ${link('pricing.html', 'Pricing')}
             ${link('banking.html', 'Banking · Soon')}

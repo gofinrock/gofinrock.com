@@ -4,11 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Pricing — Finrock</title>
-<meta name="description" content="Simple, flat pricing. Free for personal. £8.99/mo for sole traders. £19.99/mo for SMEs. No surprises." />
+<meta name="description" content="Software + a UK accountant + a Life Tracker that finds cheaper bills, subs and energy — saves you £100s/yr. From £14.99/mo first year (£19.99/mo standard). Cancel anytime." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 </head>
 <body>
 <div data-nav></div>
@@ -17,7 +20,7 @@
   <div class="container">
     <span class="pill"><span class="dot"></span> Simple, flat pricing</span>
     <h1>Pay for the books, not the <span style="background: linear-gradient(135deg, var(--navy), var(--indigo)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">revenue</span>.</h1>
-    <p class="sub">No %-of-revenue gotchas (looking at you, Hnry). One flat price, includes the Life Tracker. Cancel anytime.</p>
+    <p class="sub">Software <b>and</b> a UK accountant — always bundled. Plus a Life Tracker that compares your bills, subs and energy against UK averages — saves you £100s a year. Cancel anytime.</p>
   </div>
 </section>
 
@@ -26,16 +29,17 @@
     <div class="pricing-grid">
       <div class="price-card">
         <h3>Personal · Free</h3>
-        <div class="audience">For anyone with a UK bank account</div>
+        <div class="audience">Anyone with a UK bank account</div>
         <div class="price"><span class="amt num">£0</span><span class="per">/month</span></div>
         <div class="billing">Free forever · no card</div>
         <ul>
-          <li>Full Life Tracker · 12 tiles</li>
-          <li>Net worth · live</li>
+          <li>Life Tracker · 12 tiles</li>
+          <li>Bills · subscriptions · energy</li>
+          <li>MOT · passport · pension reminders</li>
           <li>Documents vault · expiry alarms</li>
-          <li>Bill comparison · 3 free switches/yr</li>
-          <li>1 bank connection</li>
-          <li>Mobile + web</li>
+          <li>Net worth (from your uploads)</li>
+          <li>Bill comparison · 3 cheaper-plan alerts/yr</li>
+          <li>Upload bank statements (CSV/PDF)</li>
         </ul>
         <a href="signup.html?plan=free" class="btn btn-secondary">Start free</a>
       </div>
@@ -43,37 +47,51 @@
       <div class="price-card featured">
         <span class="ribbon">Most popular</span>
         <h3>Pro · Sole trader</h3>
-        <div class="audience">Freelancers, contractors, small one-person businesses</div>
-        <div class="price"><span class="amt num">£8.99</span><span class="per">/month</span></div>
-        <div class="billing">Or £89/yr (save 17%) · 14-day free trial</div>
+        <div class="audience">Freelancers, contractors, sole traders</div>
+        <div class="price"><span class="amt num">£14.99</span><span class="per">/month</span></div>
+        <div class="billing">First year · £19.99/mo from year 2 · 14-day free trial</div>
         <ul>
-          <li>Everything in Personal, plus:</li>
+          <li>Everything in Personal (Life Tracker, bills, MOT)</li>
           <li>Full double-entry bookkeeping</li>
           <li>Voice + photo receipt capture (unlimited)</li>
           <li>Invoicing + Stripe/GoCardless payments</li>
-          <li>VAT MTD · Self Assessment ready</li>
-          <li>CIS · Mileage · Home office</li>
+          <li>VAT MTD-ready · CIS · Mileage</li>
           <li>Unlimited bank connections</li>
-          <li>Unlimited bill switches</li>
+          <li><b>Self Assessment filed by Finrock accountant</b></li>
         </ul>
         <a href="signup.html?plan=pro" class="btn btn-primary">Start free trial</a>
       </div>
 
       <div class="price-card">
-        <h3>Business · SME</h3>
-        <div class="audience">Ltd companies, partnerships, up to 25 staff</div>
-        <div class="price"><span class="amt num">£19.99</span><span class="per">/month</span></div>
-        <div class="billing">Or £199/yr (save 17%) · 14-day free trial</div>
+        <h3>Business · Ltd</h3>
+        <div class="audience">Limited companies, partnerships — no staff</div>
+        <div class="price"><span class="amt num">£24.99</span><span class="per">/month</span></div>
+        <div class="billing">First year · £29.99/mo from year 2 · 14-day free trial</div>
         <ul>
-          <li>Everything in Pro, plus:</li>
-          <li>Payroll · RTI · up to 25 employees</li>
+          <li>Everything in Pro (Life Tracker + bookkeeping)</li>
           <li>Multi-user team access (5 seats inc.)</li>
           <li>Projects · Inventory · Budgets</li>
           <li>Bills · POs · Credit notes</li>
-          <li>CT600 prep · partnership SA800</li>
-          <li>Priority support · 1h response</li>
+          <li>Year-end accounts prepared</li>
+          <li><b>CT600 + director's SA filed by Finrock accountant</b></li>
         </ul>
         <a href="signup.html?plan=business" class="btn btn-secondary">Start free trial</a>
+      </div>
+
+      <div class="price-card">
+        <h3>Business+ · with payroll</h3>
+        <div class="audience">Ltd companies with staff — up to 25 employees</div>
+        <div class="price"><span class="amt num">£34.99</span><span class="per">/month</span></div>
+        <div class="billing">First year · £44.99/mo from year 2 · 14-day free trial</div>
+        <ul>
+          <li>Everything in Business (Life Tracker + Ltd bookkeeping)</li>
+          <li>Payroll · RTI · up to 25 employees</li>
+          <li>Auto-enrolment pension submissions</li>
+          <li>Quarterly accountant review call</li>
+          <li>Priority support · 1h response</li>
+          <li><b>CT600 + SA + payroll RTI filed monthly</b></li>
+        </ul>
+        <a href="signup.html?plan=business-plus" class="btn btn-secondary">Start free trial</a>
       </div>
     </div>
 
@@ -95,25 +113,39 @@
         <thead>
           <tr>
             <th class="feat-col">Feature</th>
-            <th>Personal</th>
-            <th>Pro</th>
-            <th class="us">Business</th>
+            <th>Personal<span class="th-price">£0</span></th>
+            <th>Pro<span class="th-price">£14.99/mo*</span></th>
+            <th>Business<span class="th-price">£24.99/mo*</span></th>
+            <th class="us">Business+<span class="th-price">£34.99/mo*</span></th>
           </tr>
         </thead>
         <tbody>
-          <tr><td class="feat-col">Life Tracker (12 tiles)</td><td class="yes">✓</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
-          <tr><td class="feat-col">Bank connections</td><td>1</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
-          <tr><td class="feat-col">Bill switches /yr</td><td>3</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
-          <tr><td class="feat-col">AI receipt capture</td><td>5/mo</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
-          <tr><td class="feat-col">Invoicing + payments</td><td class="no">—</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
-          <tr><td class="feat-col">VAT MTD</td><td class="no">—</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
-          <tr><td class="feat-col">Self Assessment</td><td class="no">—</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
-          <tr><td class="feat-col">Payroll · RTI</td><td class="no">—</td><td class="no">—</td><td class="us yes">25 staff</td></tr>
-          <tr><td class="feat-col">Multi-user seats</td><td>1</td><td>1</td><td class="us yes">5 inc.</td></tr>
-          <tr><td class="feat-col">Support</td><td>Email · 2 days</td><td>Email · 1 day</td><td class="us yes">Priority · 1h</td></tr>
+          <tr class="group-row"><td>Tracking</td><td></td><td></td><td></td><td class="us"></td></tr>
+          <tr><td class="feat-col">Life Tracker · 12 tiles</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+          <tr><td class="feat-col">Bank connections</td><td class="no">Upload only</td><td>Unlimited</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
+          <tr><td class="feat-col">Cheaper-plan alerts /yr</td><td>3</td><td>Unlimited</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
+          <tr><td class="feat-col">AI receipt capture</td><td>5/mo</td><td>Unlimited</td><td>Unlimited</td><td class="us yes">Unlimited</td></tr>
+
+          <tr class="group-row"><td>Bookkeeping</td><td></td><td></td><td></td><td class="us"></td></tr>
+          <tr><td class="feat-col">Invoicing + payments</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+          <tr><td class="feat-col">VAT MTD-ready</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+          <tr><td class="feat-col">CIS · Mileage</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+          <tr><td class="feat-col">Projects · Inventory · Budgets</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+
+          <tr class="group-row"><td>Filed by Finrock accountant</td><td></td><td></td><td></td><td class="us"></td></tr>
+          <tr><td class="feat-col">Self Assessment</td><td class="no">—</td><td class="yes">✓ Filed</td><td class="yes">✓ Filed</td><td class="us yes">✓ Filed</td></tr>
+          <tr><td class="feat-col">CT600 (Ltd)</td><td class="no">—</td><td class="no">—</td><td class="yes">✓ Filed</td><td class="us yes">✓ Filed</td></tr>
+          <tr><td class="feat-col">Payroll · RTI</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="us yes">✓ Monthly</td></tr>
+          <tr><td class="feat-col">Year-end accounts</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td><td class="us yes">✓</td></tr>
+
+          <tr class="group-row"><td>Team &amp; support</td><td></td><td></td><td></td><td class="us"></td></tr>
+          <tr><td class="feat-col">Multi-user seats</td><td>1</td><td>1</td><td>5 inc.</td><td class="us yes">5 inc.</td></tr>
+          <tr><td class="feat-col">Accountant review call</td><td class="no">—</td><td class="no">—</td><td class="no">—</td><td class="us yes">Quarterly</td></tr>
+          <tr><td class="feat-col">Support</td><td>Email · 2 days</td><td>Email · 1 day</td><td>Email · 1 day</td><td class="us yes">Priority · 1h</td></tr>
         </tbody>
       </table>
     </div>
+    <p style="text-align: center; color: var(--text-3); font-size: 12.5px; margin-top: 14px;">*First-year intro pricing. Standard from year 2: Pro £19.99/mo · Business £29.99/mo · Business+ £44.99/mo.</p>
   </div>
 </section>
 
@@ -126,15 +158,15 @@
     <div class="faq">
       <details open>
         <summary>Why is Personal free?</summary>
-        <div class="faq-body">Because most people pay £30/mo across Emma, Snoop, AnyDo, etc. We replace all of them. Free tier earns us trust; you'll upgrade when you go freelance or open a Ltd company.</div>
+        <div class="faq-body">Because juggling separate apps for net worth, bills, MOT, passport and pension is exhausting. We do it all in one. Free tier earns us trust; you'll upgrade when you go freelance or open a Ltd.</div>
       </details>
       <details>
         <summary>Do you take a % of my revenue?</summary>
-        <div class="faq-body">No. Flat price. Hnry takes 1% which on £80k revenue is £800/yr — we're £107.88/yr. Bigger you grow, more sense we make.</div>
+        <div class="faq-body">No. Flat monthly price, full stop. £14.99 in your first year (£19.99 standard) regardless of whether you earn £20k or £200k. The bigger you grow, the more sense we make.</div>
       </details>
       <details>
-        <summary>What's the bill-switching savings guarantee?</summary>
-        <div class="faq-body">If you don't save more in bills than you pay us in your first year on Pro or Business, we refund the subscription. Average user saves £492/yr — most users break even in month one.</div>
+        <summary>What's the bill-savings guarantee?</summary>
+        <div class="faq-body">If our cheaper-plan alerts don't save you more than your subscription cost in year one, we refund the subscription. We surface the cheaper plan; you switch directly with the provider.</div>
       </details>
       <details>
         <summary>Can I cancel anytime?</summary>
@@ -149,6 +181,6 @@
 </section>
 
 <div data-footer></div>
-<script src="chrome.js"></script>
+<script src="chrome.js?v=2"></script>
 </body>
 </html>
