@@ -4,11 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>Security — Finrock</title>
-<meta name="description" content="How Finrock protects your money, documents and identity. AES-256, FCA-regulated, ICO-registered, UK-hosted." />
+<meta name="description" content="How Finrock protects your money, documents and identity. Designed by UK accountants. Read-only bank access. UK-hosted. 2FA on every account." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 </head>
 <body>
 <div data-nav></div>
@@ -16,8 +19,8 @@
 <section class="page-hero">
   <div class="container">
     <span class="pill"><span class="dot"></span> Security</span>
-    <h1>Built to bank<br/>standards. <span style="background: linear-gradient(135deg, #0a0a0a, var(--brand)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Calmly.</span></h1>
-    <p class="sub">How we keep your money, identity and documents safe.</p>
+    <h1>Built by accountants<br/>who care about your <span style="background: linear-gradient(135deg, #0a0a0a, var(--brand)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">data.</span></h1>
+    <p class="sub">How we keep your money, identity and documents safe — without making promises we can't keep.</p>
   </div>
 </section>
 
@@ -25,50 +28,40 @@
   <div class="container" style="max-width: 1100px;">
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
       <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
-        <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(245,152,25,0.12); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">🔒</div>
-        <h3 style="font-size: 17px; margin: 0 0 8px;">AES-256 encryption</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Every vault document encrypted at rest with AES-256-GCM. Keys rotated quarterly. Decryption only happens server-side at moment of access.</p>
-      </div>
-      <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
         <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(15,124,58,0.12); color: var(--pos); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">🏦</div>
-        <h3 style="font-size: 17px; margin: 0 0 8px;">Open Banking certified</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Bank connections via FCA-regulated TrueLayer. Read-only. We never see your bank login. Revoke access anytime from your bank's app.</p>
+        <h3 style="font-size: 17px; margin: 0 0 8px;">Read-only bank access</h3>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">When you connect a bank, it's read-only. We never see your login. Revoke access anytime from your bank's app. Or skip it entirely and upload statements.</p>
       </div>
       <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
         <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(30,27,75,0.10); color: var(--navy); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">🇬🇧</div>
         <h3 style="font-size: 17px; margin: 0 0 8px;">UK-hosted</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">All data hosted in UK datacentres (AWS eu-west-2). No data leaves the UK without your explicit consent. GDPR by default.</p>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Your data stays on UK servers. We don't ship it overseas. Built in Britain, hosted in Britain.</p>
       </div>
       <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
         <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(184,121,0,0.12); color: var(--warn); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">🛡</div>
         <h3 style="font-size: 17px; margin: 0 0 8px;">2-factor authentication</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Required for every account. TOTP (Authy, Google Authenticator) or SMS fallback. Hardware key support on Pro &amp; Business.</p>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Required for every account. Authenticator app (Authy, Google Authenticator) or SMS fallback.</p>
       </div>
       <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
-        <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(200,50,71,0.10); color: var(--neg); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">⚠</div>
-        <h3 style="font-size: 17px; margin: 0 0 8px;">SOC 2 Type II (in progress)</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Type I completed Q1 2026. Type II audit window currently open, results expected Q4 2026. Pen-tested twice a year by external firm.</p>
+        <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(245,152,25,0.12); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">👤</div>
+        <h3 style="font-size: 17px; margin: 0 0 8px;">Designed by accountants</h3>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Built and reviewed by UK accountants who handle client data daily. We treat your data the way we'd want our clients' data treated.</p>
+      </div>
+      <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
+        <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(200,50,71,0.10); color: var(--neg); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">⊗</div>
+        <h3 style="font-size: 17px; margin: 0 0 8px;">Delete anytime</h3>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">One tap in Settings deletes your account and all data. Export everything as CSV first if you want. No retention shenanigans.</p>
       </div>
       <div style="padding: 26px; background: var(--surface); border: 1px solid var(--hair-2); border-radius: 16px;">
         <div style="width: 40px; height: 40px; border-radius: 10px; background: rgba(245,152,25,0.12); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 14px;">✉</div>
-        <h3 style="font-size: 17px; margin: 0 0 8px;">Disclosure programme</h3>
-        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Found a vulnerability? security@gofinrock.com. We respond within 24h, bounties from £250–£10,000 depending on severity.</p>
-      </div>
-    </div>
-
-    <div style="margin-top: 64px; padding: 32px; background: var(--bg-2); border-radius: 18px;">
-      <h2 style="font-size: 22px; font-weight: 700; margin: 0 0 14px;">Certifications &amp; registration</h2>
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-        <div><div style="font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase;">ICO</div><div style="font-size: 14px; font-weight: 600; margin-top: 4px;">ZA 824 991</div></div>
-        <div><div style="font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase;">Companies House</div><div style="font-size: 14px; font-weight: 600; margin-top: 4px;">14523891</div></div>
-        <div><div style="font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase;">HMRC MTD</div><div style="font-size: 14px; font-weight: 600; margin-top: 4px;">Approved software</div></div>
-        <div><div style="font-size: 11px; font-weight: 700; color: var(--text-3); letter-spacing: 0.06em; text-transform: uppercase;">SOC 2</div><div style="font-size: 14px; font-weight: 600; margin-top: 4px;">Type I (Type II in progress)</div></div>
+        <h3 style="font-size: 17px; margin: 0 0 8px;">Found a bug?</h3>
+        <p style="margin: 0; color: var(--text-2); font-size: 14px; line-height: 1.55;">Email security@gofinrock.com. We respond within 24h. Bounties on a case-by-case basis.</p>
       </div>
     </div>
   </div>
 </section>
 
 <div data-footer></div>
-<script src="chrome.js"></script>
+<script src="chrome.js?v=3"></script>
 </body>
 </html>

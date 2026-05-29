@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Sign in — Finrock</title>
-<meta name="description" content="Sign in to Finrock — your AI accountant in your pocket." />
+<title>Forgot password — Finrock</title>
+<meta name="description" content="Reset your Finrock password." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -26,10 +26,6 @@
   }
   .auth-card input:focus { outline: none; border-color: var(--navy); }
   .auth-card .btn { width: 100%; justify-content: center; padding: 14px; }
-  .auth-card .divider { display: flex; align-items: center; gap: 14px; margin: 24px 0; color: var(--text-3); font-size: 12px; }
-  .auth-card .divider::before, .auth-card .divider::after { content: ''; flex: 1; height: 1px; background: var(--hair-2); }
-  .auth-card .sso { display: flex; flex-direction: column; gap: 10px; }
-  .auth-card .sso .btn { background: var(--bg); }
   .auth-card .foot { text-align: center; margin-top: 24px; font-size: 13.5px; color: var(--text-3); }
   .auth-card .foot a { color: var(--navy); font-weight: 600; }
 </style>
@@ -40,24 +36,15 @@
 <body>
 <div class="auth-wrap">
   <div class="auth-card">
-    <a href="index.html" class="brand"><span class="brand-mark"></span><span>Finrock</span></a>
-    <h1>Welcome back.</h1>
-    <p class="sub">Sign in to your Life OS.</p>
+    <a href="index.html" aria-label="Finrock"><img src="assets/favicon.svg" alt="Finrock" style="width: 40px; height: 40px;" /></a>
+    <h1>Reset your password</h1>
+    <p class="sub">Enter the email you signed up with. We'll send you a link to set a new password.</p>
     <form>
       <label for="email">Email</label>
-      <input type="email" id="email" placeholder="you@example.com" />
-      <label for="pw">Password</label>
-      <input type="password" id="pw" placeholder="••••••••" />
-      <button type="submit" class="btn btn-primary">Sign in</button>
+      <input id="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+      <button type="submit" class="btn btn-primary">Send reset link</button>
     </form>
-    <div class="divider">or continue with</div>
-    <div class="sso">
-      <button class="btn btn-secondary">Continue with Google</button>
-      <button class="btn btn-secondary">Continue with Apple</button>
-      <button class="btn btn-secondary">Magic link by email</button>
-    </div>
-    <p class="foot">New here? <a href="signup.html">Create an account →</a></p>
-    <p class="foot" style="margin-top: 8px;"><a href="forgot.html">Forgot password?</a></p>
+    <p class="foot">Remembered it? <a href="login.html">Sign in</a></p>
   </div>
 </div>
 </body>

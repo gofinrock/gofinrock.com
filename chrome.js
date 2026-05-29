@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="nav-links">
             ${link('personal.html', 'Personal')}
             ${link('business.html', 'Business')}
+            ${link('side-hustlers.html', 'Side hustle')}
             ${link('accountants.html', 'Accountants')}
             ${link('pricing.html', 'Pricing')}
             ${link('banking.html', 'Banking · Soon')}
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <ul>
                 <li><a href="personal.html">Personal</a></li>
                 <li><a href="business.html">Business</a></li>
+                <li><a href="side-hustlers.html">Side hustle</a></li>
                 <li><a href="accountants.html">For accountants</a></li>
                 <li><a href="banking.html">Banking · 2026</a></li>
               </ul>
@@ -87,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
           </div>
           <div class="footer-bottom">
-            <div>© ${yr} Finrock Ltd · Made in Great Britain</div>
-            <div>FCA-regulated comparison · ICO-registered · AES-256 vault</div>
+            <div>© ${yr} Finrock Ltd · Made in Britain</div>
+            <div>Designed by UK accountants · Cancel anytime</div>
           </div>
         </div>
       </footer>`;
