@@ -15,12 +15,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Upload artifact
+
+      # Example Node build — replace with your build (Hugo, Jekyll, etc.)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build   # produces ./dist
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '.'
-      
+          path: './dist'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
