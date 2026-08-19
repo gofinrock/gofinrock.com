@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Finrock Careers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+@font-face { font-family: 'Inter Display'; src: url('assets/InterDisplay-SemiBold.woff2') format('woff2'); font-weight: 600; font-display: swap; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; background: #0b0b10; }
+body { margin: 0; background: linear-gradient(180deg, #0b0b10 0, #0b0b10 560px, #f6f5f1 560px) no-repeat, #f6f5f1; color: #15161a; font-family: Inter, system-ui, -apple-system, sans-serif; overflow-x: hidden; overflow-x: clip;  }
+* { box-sizing: border-box; }
+a { color: #1e1b4b; text-decoration: none; }
+a:hover { color: #312e81; }
+[data-lucide] { display: block; }
+.rv { opacity: 0; transform: translateY(26px) scale(.985); filter: blur(7px); transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1), filter .9s cubic-bezier(.16,1,.3,1); }
+.rv.in { opacity: 1; transform: none; filter: blur(0); }
+.card-h { transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .4s, border-color .4s; }
+.card-h:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(15,23,42,.06), 0 24px 48px rgba(15,23,42,.10); }
+.btn-p { transition: transform .2s, box-shadow .2s, opacity .2s; }
+.btn-p:hover { transform: translateY(-1px); opacity: .94; box-shadow: 0 10px 26px rgba(30,27,75,.28); }
+.btn-p { position: relative; overflow: hidden; }
+.btn-p::after { content: ''; position: absolute; top: 0; bottom: 0; left: -80%; width: 55%; background: linear-gradient(105deg, transparent, rgba(255,255,255,.32), transparent); transform: skewX(-20deg); transition: left .6s cubic-bezier(.16,1,.3,1); pointer-events: none; }
+.btn-p:hover::after { left: 130%; }
+header { transition: background .45s, border-color .45s; }
+header:not(.scrolled) { background: rgba(9,9,13,.42) !important; border-bottom-color: rgba(255,255,255,.07) !important; backdrop-filter: blur(14px) saturate(140%); }
+header:not(.scrolled) .navlink { color: rgba(255,255,255,.78) !important; }
+header:not(.scrolled) .navlink.on { color: #fff !important; }
+header:not(.scrolled) .hsign { color: rgba(255,255,255,.78) !important; }
+header:not(.scrolled) .hcta { background: #f6921a !important; color: #140d02 !important; box-shadow: 0 8px 24px rgba(246,146,26,.35); }
+header:not(.scrolled) g[fill="#15161a"] { fill: #ffffff; }
+header.scrolled { box-shadow: 0 8px 32px rgba(15,23,42,.08); }
+header.scrolled .hdr-inner { padding-top: 10px !important; padding-bottom: 10px !important; }
+.hdr-inner { transition: padding .35s cubic-bezier(.16,1,.3,1); }
+.mbtn { display: none; width: 40px; height: 40px; border-radius: 11px; border: 1px solid rgba(20,22,28,.14); background: transparent; align-items: center; justify-content: center; cursor: pointer; color: #15161a; }
+header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); }
+.mmenu { display: none; position: absolute; top: calc(100% + 8px); right: 20px; left: 20px; flex-direction: column; gap: 2px; background: #fff; border: 1px solid rgba(20,22,28,.10); border-radius: 16px; padding: 10px; box-shadow: 0 24px 60px rgba(15,23,42,.18); }
+.mmenu.open { display: flex; }
+.mmenu a { font-size: 15px; font-weight: 600; color: #15161a; padding: 12px 14px; border-radius: 10px; }
+.mmenu a:hover { background: rgba(30,27,75,.06); }
+@media (max-width: 920px) { .mbtn { display: flex } }
+.navlink { position: relative; }
+.navlink:after { content: ''; position: absolute; left: 0; right: 100%; bottom: -4px; height: 2px; background: #f6921a; transition: right .25s cubic-bezier(.16,1,.3,1); }
+.navlink:hover:after, .navlink.on:after { right: 0; }
+.fld { width: 100%; font-family: inherit; font-size: 15px; color: #15161a; background: #fff; border: 1px solid rgba(20,22,28,.16); border-radius: 12px; padding: 13px 15px; transition: border-color .2s, box-shadow .2s; }
+.fld:focus { outline: none; border-color: #1e1b4b; box-shadow: 0 0 0 3px rgba(30,27,75,.10); }
+.fld::placeholder { color: rgba(21,22,26,.38); }
+label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: .01em; color: rgba(21,22,26,.68); margin-bottom: 7px; }
+@media (max-width: 920px) { .mainnav { display: none } .hidem { display: none } .g2 { grid-template-columns: 1fr !important } .g3 { grid-template-columns: 1fr !important } .g4 { grid-template-columns: repeat(2, 1fr) !important } }
+@media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; filter: none; transition: none } }
+</style>
+</head>
+<body>
+<div style="min-height:100vh;background:#f6f5f1">
+
+<div style="background:#070709;color:#fff;text-align:center;padding:8px 16px;font-size:12.5px;font-weight:600;position:relative;z-index:61">
+  <span style="opacity:.85">Making Tax Digital for Income Tax is now live —</span> <a href="finrock-landing.html#filing" style="color:#f6921a;font-weight:700">Finrock files your quarterly updates →</a>
+</div>
+
+<header style="position:sticky;top:0;z-index:60;background:rgba(251,250,246,.85);backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid rgba(20,22,28,.07)">
+  <div class="hdr-inner" style="max-width:1280px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+    <a href="finrock-landing.html" aria-label="Finrock" style="display:flex;align-items:center;gap:9px">
+      <svg viewBox="0 0 280.83 56.13" style="height:26px;width:auto;display:block" role="img" aria-label="Finrock"><g transform="translate(-40.81 -146.87)"><g fill="#15161a"><path d="M62.57,203l24.78-40.52a2.06,2.06,0,0,1,.22.25q2.66,4.34,5.29,8.68a.69.69,0,0,1,0,.64c-2.85,4.7-5.72,9.38-8.64,14.16-1-1.55-1.88-3-2.85-4.64L79.87,184q-5.28,8.59-10.54,17.2c-.29.48-.56,1-.88,1.44a.67.67,0,0,1-.45.27C66.24,203,64.48,203,62.57,203Z"></path><path d="M40.81,202.8l34-55.93,3.41,5.61c1.36,2.25,2.74,4.5,4.09,6.76a1,1,0,0,1,.08.82c-3.9,6.47-8.13,12.65-12.06,19.11,0,0,0,0-.15.13-1.27-2.09-2.24-3.86-3.56-6l-.6,1q-8.49,14-17,28a1.14,1.14,0,0,1-1.13.61C45.59,202.78,43.28,202.8,40.81,202.8Z"></path><path d="M96.38,178.11c1.84,3,3.61,5.93,5.41,8.82a.86.86,0,0,1,0,1q-4.17,6.76-8.31,13.56c-.06.1-.14.2-.24.35l-2.84-4.62c-.78,1.29-1.53,2.51-2.28,3.73-.35.57-.69,1.15-1.06,1.7a.67.67,0,0,1-.46.27c-1.7,0-3.41,0-5.11,0a1.52,1.52,0,0,1-.27-.06Z"></path><path d="M205.13,165.72c.52-.09,1-.16,1.48-.21s1-.07,1.48-.07,1,0,1.55.07a13,13,0,0,1,1.42.21q.21,1.07.42,2.79a24.91,24.91,0,0,1,.21,2.93,14.46,14.46,0,0,1,3.92-4.16,10.34,10.34,0,0,1,6.24-1.77c.38,0,.77,0,1.17,0s.74.06,1,.1a11,11,0,0,1,.21,1.34,14.19,14.19,0,0,1,.07,1.49,15.45,15.45,0,0,1-.1,1.76c-.07.61-.16,1.2-.25,1.76a5,5,0,0,0-1.16-.14h-1a12.4,12.4,0,0,0-3.63.53,7.77,7.77,0,0,0-3.11,1.87,9.43,9.43,0,0,0-2.18,3.67,18.3,18.3,0,0,0-.81,6v18a16,16,0,0,1-1.73.22c-.64,0-1.22.07-1.73.07s-1.1,0-1.73-.07-1.24-.12-1.8-.22Z"></path><path d="M240.7,202.77a17.75,17.75,0,0,1-7.41-1.44,14.82,14.82,0,0,1-5.3-4,16.61,16.61,0,0,1-3.14-6,27.94,27.94,0,0,1,0-15,16.53,16.53,0,0,1,3.14-6,15.13,15.13,0,0,1,5.3-4,19.29,19.29,0,0,1,14.82,0,15.18,15.18,0,0,1,5.29,4,16.53,16.53,0,0,1,3.14,6,27.94,27.94,0,0,1,0,15,16.61,16.61,0,0,1-3.14,6,14.87,14.87,0,0,1-5.29,4A17.81,17.81,0,0,1,240.7,202.77Zm0-5.57q4.86,0,7.19-3.53t2.33-9.81q0-6.29-2.33-9.77t-7.19-3.5q-4.87,0-7.17,3.5t-2.29,9.77q0,6.28,2.29,9.81T240.7,197.2Z"></path><path d="M286.56,195.64a11.12,11.12,0,0,1,1,2.47,13,13,0,0,1,.5,3,26.15,26.15,0,0,1-9.53,1.62q-9,0-13.62-5.11t-4.59-13.8a24.07,24.07,0,0,1,1.13-7.48,16.92,16.92,0,0,1,3.35-6,16,16,0,0,1,5.54-4,18.69,18.69,0,0,1,7.7-1.48,33.68,33.68,0,0,1,5.22.35,21.56,21.56,0,0,1,4.3,1.13,13.87,13.87,0,0,1-.32,2.79,12,12,0,0,1-.88,2.78,24,24,0,0,0-7.9-1.2q-5.43,0-8.12,3.6t-2.68,9.53q0,6.78,3,9.91a11,11,0,0,0,8.32,3.14,25.09,25.09,0,0,0,3.92-.28A17.24,17.24,0,0,0,286.56,195.64Z"></path><path d="M291.57,150.2a13.89,13.89,0,0,1,1.73-.21c.64-.05,1.21-.07,1.73-.07s1.11,0,1.77.07a13.72,13.72,0,0,1,1.76.21v51.72a15.62,15.62,0,0,1-1.76.22c-.66,0-1.25.07-1.77.07s-1.09,0-1.73-.07a16,16,0,0,1-1.73-.22Zm8.9,33L312,165.72q.91-.14,1.83-.21c.61,0,1.25-.07,1.91-.07s1.38,0,2,.07,1.28.12,1.94.21l-11.5,16.94,13.48,19.26c-.66.1-1.3.17-1.91.22s-1.25.07-1.9.07-1.32,0-2-.07-1.32-.12-2-.22Z"></path></g><g fill="#f6921a"><path d="M118.47,151.19h28.79a21.26,21.26,0,0,1,.43,4.3,22.1,22.1,0,0,1-.43,4.45H128.77v11.92h14.68a23.2,23.2,0,0,1,.43,4.38,22.66,22.66,0,0,1-.43,4.44H128.77v21.24a31,31,0,0,1-10.3,0Z"></path><path d="M151.92,173.06h-4.73a16,16,0,0,1-.32-1.94,19,19,0,0,1-.1-1.94,16.75,16.75,0,0,1,.42-3.74h14.54v36.48a29.2,29.2,0,0,1-4.94.43,28.84,28.84,0,0,1-4.87-.43Zm-1.48-13.76a27.35,27.35,0,0,1-.42-4.73,28.12,28.12,0,0,1,.42-4.72,24,24,0,0,1,2.57-.32c.92-.07,1.76-.11,2.51-.11s1.67,0,2.61.11a23.88,23.88,0,0,1,2.61.32,19.44,19.44,0,0,1,.28,2.36c0,.78.07,1.56.07,2.36s0,1.53-.07,2.33a19.61,19.61,0,0,1-.28,2.4,20,20,0,0,1-2.57.28c-.92,0-1.78.07-2.58.07s-1.6,0-2.54-.07A20.08,20.08,0,0,1,150.44,159.3Z"></path><path d="M167.3,165.44a19.42,19.42,0,0,1,2-.32,21,21,0,0,1,2.19-.1,19.09,19.09,0,0,1,2.12.1c.61.07,1.24.18,1.9.32a4.36,4.36,0,0,1,.39,1c.12.45.22.92.32,1.42s.17,1,.24,1.44l.18,1.2a17.22,17.22,0,0,1,1.69-2.12,12.32,12.32,0,0,1,2.3-1.9,12.77,12.77,0,0,1,2.93-1.38,11.61,11.61,0,0,1,3.59-.53q6.21,0,9.35,3.39t3.14,10.66v23.28a29.4,29.4,0,0,1-10,0v-20.6a12,12,0,0,0-1.16-5.86,4.28,4.28,0,0,0-4.06-2,9,9,0,0,0-2.47.35,5.15,5.15,0,0,0-2.29,1.37A7.48,7.48,0,0,0,178,178a15.12,15.12,0,0,0-.63,4.8v19.12a29.46,29.46,0,0,1-10,0Z"></path><path d="M99.82,203l5.58-9.09L111,203Z"></path></g></g></svg>
+    </a>
+    <nav class="mainnav" style="display:flex;align-items:center;gap:28px">
+      <a class="navlink" href="finrock-personal.html" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70)">Personal</a>
+      <a class="navlink" href="finrock-business.html" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70)">Business</a>
+      <a class="navlink" href="finrock-accountants.html" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70)">Accountants</a>
+      <a class="navlink" href="finrock-pricing.html" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70)">Pricing</a>
+      <a class="navlink" href="finrock-help.html" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70)">Help</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="https://app.gofinrock.com/login" class="hidem hsign" style="font-size:13.5px;font-weight:600;color:rgba(21,22,26,.70);padding:10px 14px">Sign in</a>
+      <a href="https://app.gofinrock.com/register" class="btn-p hcta" style="display:inline-block;font-size:13.5px;font-weight:700;background:#1e1b4b;color:#fff;padding:11px 20px;border-radius:12px;transition:background .45s,color .45s">Get started free</a>
+      <button class="mbtn" aria-label="Menu" type="button"><i data-lucide="menu" style="width:19px;height:19px"></i></button>
+    </div>
+  </div>
+
+  <nav class="mmenu">
+    <a href="finrock-personal.html">Personal</a>
+    <a href="finrock-business.html">Business</a>
+    <a href="finrock-sole-traders.html">Sole traders</a>
+    <a href="finrock-accountants.html">Accountants</a>
+    <a href="finrock-pricing.html">Pricing</a>
+    <a href="finrock-banking.html">Banking · soon</a>
+    <a href="finrock-help.html">Help centre</a>
+    <a href="finrock-about.html">About</a>
+    <a href="finrock-contact.html">Contact</a>
+    <a href="https://app.gofinrock.com/login">Sign in</a>
+  </nav>
+</header>
+
+<section style="position:relative;overflow:hidden;background:radial-gradient(130% 100% at 72% -12%,#1b1b2c 0%,#121219 42%,#0b0b10 74%,#070709 100%);margin-top:-72px;padding-top:72px;border-bottom:1px solid rgba(20,22,28,.07)">
+  <div aria-hidden="true" style="position:absolute;width:600px;height:600px;border-radius:9999px;background:radial-gradient(closest-side,rgba(246,146,26,.11),transparent);right:-160px;top:-220px;pointer-events:none"></div>
+  <div style="position:relative;max-width:1280px;margin:0 auto;padding:80px 32px 64px">
+    <p class="rv in" style="margin:0;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f6921a">Careers</p>
+    <h1 class="rv in" style="margin:14px 0 0;max-width:800px;font-size:clamp(36px,4.4vw,58px);line-height:1.03;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance">Build the app that runs adult life.</h1>
+    <p class="rv in" style="margin:20px 0 0;max-width:600px;font-size:17px;line-height:1.62;color:rgba(255,255,255,.66);text-wrap:pretty">A small team in London building the financial operating system for everyday people. Remote-friendly, together in person twice a quarter.</p>
+    <div class="rv in" style="display:flex;align-items:center;gap:12px;margin-top:30px;flex-wrap:wrap">
+      <a href="#openings" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">See open roles <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+      <a href="finrock-about.html" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06)">Meet the team</a>
+    </div>
+  </div>
+</section>
+<section style="max-width:1280px;margin:0 auto;padding:72px 32px 0">
+  <div class="rv" style="max-width:620px">
+    <p style="margin:0;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f6921a">How we work</p>
+    <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:1.06;letter-spacing:-.035em;font-weight:800">Calm, fast, and honest.</h2>
+
+  </div>
+
+  <div class="g4" style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px">
+    <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04)">
+      <span style="width:44px;height:44px;border-radius:13px;background:rgba(246,146,26,.12);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="users" style="width:21px;height:21px;color:#f6921a"></i></span>
+      <p style="margin:0;font-size:17px;font-weight:700;letter-spacing:-.02em">Small teams, big trust</p>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">Engineers ship to production daily. Designers prototype in real code. Product talks to users every week. No middle layer.</p>
+    </div>
+    <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04);transition-delay:60ms">
+      <span style="width:44px;height:44px;border-radius:13px;background:rgba(30,27,75,.07);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="message-square" style="width:21px;height:21px;color:#1e1b4b"></i></span>
+      <p style="margin:0;font-size:17px;font-weight:700;letter-spacing:-.02em">Adult tone</p>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">No confetti, no exclamation marks. We build for the 55-year-old accountant. Calm UI, calm tone, calm process.</p>
+    </div>
+    <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04);transition-delay:120ms">
+      <span style="width:44px;height:44px;border-radius:13px;background:rgba(15,124,58,.10);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="badge-pound-sterling" style="width:21px;height:21px;color:#0f7c3a"></i></span>
+      <p style="margin:0;font-size:17px;font-weight:700;letter-spacing:-.02em">Real money</p>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">Above-market salaries for London and remote UK. Real equity, real pension matching. We pay for the gear and the books.</p>
+    </div>
+    <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04);transition-delay:180ms">
+      <span style="width:44px;height:44px;border-radius:13px;background:rgba(2,132,199,.10);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="sun" style="width:21px;height:21px;color:#0284c7"></i></span>
+      <p style="margin:0;font-size:17px;font-weight:700;letter-spacing:-.02em">Real lives</p>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">28 days holiday. UK working hours. No Slack at weekends. Parents and night owls both welcome.</p>
+    </div>
+  </div>
+</section>
+
+<section id="openings" style="max-width:1280px;margin:0 auto;padding:88px 32px 0">
+  <div class="rv" style="max-width:620px">
+    <p style="margin:0;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f6921a">Open roles</p>
+    <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:1.06;letter-spacing:-.035em;font-weight:800">Join us.</h2>
+    <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:rgba(21,22,26,.62);text-wrap:pretty">We hire ahead of need — if you are close, write anyway.</p>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:12px;margin-top:32px">
+      <a href="mailto:careers@gofinrock.com" class="rv card-h" style="display:grid;grid-template-columns:minmax(0,2fr) 1fr 1fr 30px;gap:16px;align-items:center;padding:22px 24px;background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px">
+        <div><div style="font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:#15161a">Senior Mobile Engineer</div><div style="font-size:13px;color:rgba(21,22,26,.52);margin-top:3px">React Native · Swift &amp; Kotlin a plus</div></div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">Engineering</div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">London or Remote UK</div>
+        <i data-lucide="arrow-right" style="width:16px;height:16px;color:rgba(21,22,26,.40);margin-left:auto"></i>
+      </a>
+      <a href="mailto:careers@gofinrock.com" class="rv card-h" style="display:grid;grid-template-columns:minmax(0,2fr) 1fr 1fr 30px;gap:16px;align-items:center;padding:22px 24px;background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px">
+        <div><div style="font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:#15161a">Senior Product Designer</div><div style="font-size:13px;color:rgba(21,22,26,.52);margin-top:3px">Design system + native iOS/Android</div></div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">Design</div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">London or Remote UK</div>
+        <i data-lucide="arrow-right" style="width:16px;height:16px;color:rgba(21,22,26,.40);margin-left:auto"></i>
+      </a>
+      <a href="mailto:careers@gofinrock.com" class="rv card-h" style="display:grid;grid-template-columns:minmax(0,2fr) 1fr 1fr 30px;gap:16px;align-items:center;padding:22px 24px;background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px">
+        <div><div style="font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:#15161a">Backend Engineer · Go</div><div style="font-size:13px;color:rgba(21,22,26,.52);margin-top:3px">HMRC integrations · Open Banking</div></div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">Engineering</div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">London or Remote UK</div>
+        <i data-lucide="arrow-right" style="width:16px;height:16px;color:rgba(21,22,26,.40);margin-left:auto"></i>
+      </a>
+      <a href="mailto:careers@gofinrock.com" class="rv card-h" style="display:grid;grid-template-columns:minmax(0,2fr) 1fr 1fr 30px;gap:16px;align-items:center;padding:22px 24px;background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px">
+        <div><div style="font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:#15161a">Head of Accountant Network</div><div style="font-size:13px;color:rgba(21,22,26,.52);margin-top:3px">Build the panel of UK qualified accountants</div></div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">Operations</div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">London</div>
+        <i data-lucide="arrow-right" style="width:16px;height:16px;color:rgba(21,22,26,.40);margin-left:auto"></i>
+      </a>
+      <a href="mailto:careers@gofinrock.com" class="rv card-h" style="display:grid;grid-template-columns:minmax(0,2fr) 1fr 1fr 30px;gap:16px;align-items:center;padding:22px 24px;background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px">
+        <div><div style="font-size:16.5px;font-weight:700;letter-spacing:-.02em;color:#15161a">Customer Success Lead</div><div style="font-size:13px;color:rgba(21,22,26,.52);margin-top:3px">Onboarding, support, retention</div></div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">Customer</div>
+        <div style="font-size:13.5px;color:rgba(21,22,26,.62)">London or Remote UK</div>
+        <i data-lucide="arrow-right" style="width:16px;height:16px;color:rgba(21,22,26,.40);margin-left:auto"></i>
+      </a>
+  </div>
+  <p class="rv" style="margin:28px 0 0;text-align:center;font-size:14px;color:rgba(21,22,26,.55)">Don&rsquo;t see your role? <a href="mailto:careers@gofinrock.com" style="font-weight:700">Tell us about you anyway</a>.</p>
+</section>
+<section style="max-width:1280px;margin:0 auto;padding:96px 32px 112px">
+  <div class="rv" style="position:relative;overflow:hidden;border-radius:30px;text-align:center;padding:64px 46px;background:linear-gradient(160deg,#0a0d24 0%,#1e1b4b 55%,#312e81 100%);color:#fff">
+    <div aria-hidden="true" style="position:absolute;width:520px;height:520px;border-radius:9999px;background:#f6921a;opacity:.15;filter:blur(130px);left:50%;transform:translateX(-50%);bottom:-340px"></div>
+    <div style="position:relative">
+      <h2 style="margin:0;font-size:clamp(28px,3.6vw,44px);line-height:1.04;letter-spacing:-.04em;font-weight:800">Come build it with us.</h2>
+      <p style="margin:16px auto 0;max-width:460px;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.66)">One conversation, one take-home if it helps you show your work, one decision. No eight-stage loops.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap">
+        <a href="mailto:careers@gofinrock.com" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:#f6921a;color:#140d02;font-size:15px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 36px rgba(246,146,26,.32)">Email careers@ <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+        <a href="finrock-about.html" style="font-size:15px;font-weight:600;color:rgba(255,255,255,.85);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.20)">About Finrock</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background:#f6f5f1;border-top:1px solid rgba(20,22,28,.07)">
+  <div style="max-width:1280px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:center;gap:10px 34px;flex-wrap:wrap">
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:rgba(21,22,26,.62)"><i data-lucide="landmark" style="width:15px;height:15px;color:#1e1b4b"></i>MTD quarterly updates &amp; VAT — filed from the app</span>
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:rgba(21,22,26,.62)"><i data-lucide="building-2" style="width:15px;height:15px;color:#0f7c3a"></i>Open Banking feeds via FCA-authorised providers</span>
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:rgba(21,22,26,.62)"><i data-lucide="lock" style="width:15px;height:15px;color:#f6921a"></i>Encrypted in transit &amp; at rest — data stays in the UK</span>
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:600;color:rgba(21,22,26,.62)"><i data-lucide="monitor-smartphone" style="width:15px;height:15px;color:#1e1b4b"></i>iPhone, Android &amp; desktop — nothing to install</span>
+  </div>
+</section>
+<footer style="background:#fbfaf6;border-top:1px solid rgba(20,22,28,.08)">
+  <div style="max-width:1280px;margin:0 auto;padding:64px 32px 30px">
+    <div class="g4" style="display:grid;grid-template-columns:minmax(0,1.4fr) repeat(4,minmax(0,1fr));gap:32px">
+      <div>
+        <a href="finrock-landing.html" aria-label="Finrock" style="display:inline-flex;align-items:center"><img src="assets/finrock-logo.svg" alt="Finrock" style="height:26px;width:auto;display:block" /></a>
+        <p style="margin:12px 0 0;font-size:13px;line-height:1.6;color:rgba(21,22,26,.55);max-width:240px">One ledger for your business, your personal money, and the filings that fall out of both.</p>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a href="https://x.com/gofinrock" aria-label="X" style="width:32px;height:32px;border-radius:9px;border:1px solid rgba(20,22,28,.12);display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700">𝕏</a>
+          <a href="https://linkedin.com/company/gofinrock" aria-label="LinkedIn" style="width:32px;height:32px;border-radius:9px;border:1px solid rgba(20,22,28,.12);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800">in</a>
+          <a href="https://instagram.com/gofinrock" aria-label="Instagram" style="width:32px;height:32px;border-radius:9px;border:1px solid rgba(20,22,28,.12);display:flex;align-items:center;justify-content:center"><i data-lucide="instagram" style="width:14px;height:14px"></i></a>
+        </div>
+      </div>
+      
+        <div>
+          <p style="margin:0 0 14px;font-size:11.5px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:rgba(21,22,26,.40)">Product</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            
+              <a href="finrock-personal.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Personal · My Life</a>
+            
+              <a href="finrock-business.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Business</a>
+            
+              <a href="finrock-sole-traders.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Sole traders</a>
+            
+              <a href="finrock-accountants.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">For accountants</a>
+            
+              <a href="finrock-banking.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Banking · soon</a>
+            
+              <a href="finrock-pricing.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Pricing</a>
+            
+          </div>
+        </div>
+      
+        <div>
+          <p style="margin:0 0 14px;font-size:11.5px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:rgba(21,22,26,.40)">Company</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            
+              <a href="finrock-about.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">About</a>
+            
+              <a href="finrock-careers.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Careers</a>
+            
+              <a href="finrock-contact.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Contact</a>
+            
+          </div>
+        </div>
+      
+        <div>
+          <p style="margin:0 0 14px;font-size:11.5px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:rgba(21,22,26,.40)">Resources</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            
+              <a href="finrock-help.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Help centre</a>
+            
+              <a href="finrock-status.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">System status</a>
+            
+              <a href="finrock-security.html" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Security</a>
+            
+          </div>
+        </div>
+      
+        <div>
+          <p style="margin:0 0 14px;font-size:11.5px;font-weight:800;letter-spacing:.10em;text-transform:uppercase;color:rgba(21,22,26,.40)">Legal</p>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            
+              <a href="finrock-legal.html#privacy" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Privacy</a>
+            
+              <a href="finrock-legal.html#terms" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Terms</a>
+            
+              <a href="finrock-legal.html#cookies" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">Cookies</a>
+            
+              <a href="finrock-legal.html#gdpr" style="font-size:13.5px;font-weight:500;color:rgba(21,22,26,.66)">GDPR</a>
+            
+          </div>
+        </div>
+      
+    </div>
+    <div style="margin-top:44px;padding-top:22px;border-top:1px solid rgba(20,22,28,.08);display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <p style="margin:0;font-size:12px;color:rgba(21,22,26,.45)">© 2026 Finrock Ltd · Made in Britain</p>
+      <p style="margin:0;font-size:12px;color:rgba(21,22,26,.45)">hi@gofinrock.com · Cancel anytime · UK &amp; Northern Ireland</p>
+    </div>
+  </div>
+</footer>
+
+</div>
+<script src="site.js"></script>
+</body>
+</html>
