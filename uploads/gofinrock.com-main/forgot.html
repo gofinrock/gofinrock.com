@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Forgot password — Finrock</title>
+<meta name="description" content="Reset your Finrock password." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  .auth-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px; }
+  .auth-card {
+    width: 100%; max-width: 420px;
+    background: var(--surface); border: 1px solid var(--hair-2); border-radius: 20px;
+    padding: 40px; box-shadow: 0 24px 60px rgba(15,17,23,0.08);
+  }
+  .auth-card h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.02em; margin: 18px 0 6px; }
+  .auth-card .sub { color: var(--text-3); margin-bottom: 28px; font-size: 14px; }
+  .auth-card label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-2); }
+  .auth-card input {
+    width: 100%; height: 48px; padding: 0 14px; border-radius: 10px;
+    border: 1px solid var(--hair-2); background: var(--bg);
+    font-size: 14px; font-family: inherit; margin-bottom: 16px;
+  }
+  .auth-card input:focus { outline: none; border-color: var(--navy); }
+  .auth-card .btn { width: 100%; justify-content: center; padding: 14px; }
+  .auth-card .foot { text-align: center; margin-top: 24px; font-size: 13.5px; color: var(--text-3); }
+  .auth-card .foot a { color: var(--navy); font-weight: 600; }
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <a href="index.html" aria-label="Finrock"><img src="assets/favicon.svg" alt="Finrock" style="width: 40px; height: 40px;" /></a>
+    <h1>Reset your password</h1>
+    <p class="sub">Enter the email you signed up with. We'll send you a link to set a new password.</p>
+    <form>
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+      <button type="submit" class="btn btn-primary">Send reset link</button>
+    </form>
+    <p class="foot">Remembered it? <a href="login.html">Sign in</a></p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<title>Legal, terms and privacy | Finrock</title>
+<meta name="description" content="Terms of service, privacy policy and regulatory information for Finrock.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://gofinrock.com/legal">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Finrock">
+<meta property="og:title" content="Legal, terms and privacy | Finrock">
+<meta property="og:description" content="Terms of service, privacy policy and regulatory information for Finrock.">
+<meta property="og:url" content="https://gofinrock.com/legal">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Legal, terms and privacy | Finrock">
+<meta name="twitter:description" content="Terms of service, privacy policy and regulatory information for Finrock.">
+<meta name="theme-color" content="#0b0b10">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Legal, terms and privacy | Finrock","description":"Terms of service, privacy policy and regulatory information for Finrock.","url":"https://gofinrock.com/legal","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 </head>
 <body>
 <x-dc>
@@ -60,6 +76,27 @@ header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); 
 @media (max-width: 980px) { .legalgrid { grid-template-columns: 1fr !important } .sticky-toc { position: static !important } }
 @media (max-width: 920px) { .mainnav { display: none } .hidem { display: none } .g4 { grid-template-columns: repeat(2, 1fr) !important } }
 @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; filter: none; transition: none } }
+
+/* --- responsive hardening --- */
+@media (max-width: 760px) {
+  section, .wrap { padding-left: 20px !important; padding-right: 20px !important }
+  .g2, .g3, .g4 { grid-template-columns: 1fr !important }
+  [style*="grid-template-columns:repeat(4"], [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important }
+  [style*="grid-template-columns:1fr 1fr"], [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important }
+  h1 { font-size: clamp(34px, 9vw, 46px) !important; line-height: 1.04 !important }
+  h2 { font-size: clamp(26px, 7.2vw, 34px) !important; line-height: 1.08 !important }
+  img, svg, canvas { max-width: 100% }
+}
+@media (max-width: 520px) {
+  section, .wrap { padding-left: 16px !important; padding-right: 16px !important }
+}
+
+/* desktop-workspace shots: unreadable when scaled onto a phone — the phone mockups carry the story there */
+@media (max-width: 760px) {
+  .deskshot > div:first-child { display: none !important }
+  .deskshot figcaption, .deskshot + figcaption { margin-top: 0 !important }
+}
 </style>
 </helmet>
 

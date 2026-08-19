@@ -1,9 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
+<title>Finrock — bookkeeping, tax filing and life admin in one app</title>
+<meta name="description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://gofinrock.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Finrock">
+<meta property="og:title" content="Finrock — bookkeeping, tax filing and life admin in one app">
+<meta property="og:description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<meta property="og:url" content="https://gofinrock.com/">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Finrock — bookkeeping, tax filing and life admin in one app">
+<meta name="twitter:description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<meta name="theme-color" content="#0b0b10">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Finrock — bookkeeping, tax filing and life admin in one app","description":"Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.","url":"https://gofinrock.com/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 </head>
 <body>
 <x-dc>
@@ -79,6 +95,27 @@ details.faq[open] summary .fx { transform: rotate(45deg); background: #1e1b4b; c
 @media (max-width: 944px) { .g3 { grid-template-columns: 1fr !important } }
 @media (max-width: 920px) { .mainnav { display: none } .g2 { grid-template-columns: 1fr !important } .g3 { grid-template-columns: 1fr !important } .g4 { grid-template-columns: repeat(2, 1fr) !important } .fbadge { display: none !important } }
 @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; filter: none; transition: none } .aur, .aur2, .mq { animation: none } .float { animation: none } }
+
+/* --- responsive hardening --- */
+@media (max-width: 760px) {
+  section, .wrap { padding-left: 20px !important; padding-right: 20px !important }
+  .g2, .g3, .g4 { grid-template-columns: 1fr !important }
+  [style*="grid-template-columns:repeat(4"], [style*="grid-template-columns:repeat(3"],
+  [style*="grid-template-columns: repeat(4"], [style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important }
+  [style*="grid-template-columns:1fr 1fr"], [style*="grid-template-columns: 1fr 1fr"] { grid-template-columns: 1fr !important }
+  h1 { font-size: clamp(34px, 9vw, 46px) !important; line-height: 1.04 !important }
+  h2 { font-size: clamp(26px, 7.2vw, 34px) !important; line-height: 1.08 !important }
+  img, svg, canvas { max-width: 100% }
+}
+@media (max-width: 520px) {
+  section, .wrap { padding-left: 16px !important; padding-right: 16px !important }
+}
+
+/* desktop-workspace shots: unreadable when scaled onto a phone — the phone mockups carry the story there */
+@media (max-width: 760px) {
+  .deskshot > div:first-child { display: none !important }
+  .deskshot figcaption, .deskshot + figcaption { margin-top: 0 !important }
+}
 </style>
 </helmet>
 

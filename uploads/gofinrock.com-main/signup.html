@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Start free — Finrock</title>
+<meta name="description" content="Start free with Finrock — Life Tracker forever free. From £14.99/mo for sole traders with Self Assessment filed by a UK accountant." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  .auth-wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px; }
+  .auth-card {
+    width: 100%; max-width: 460px;
+    background: var(--surface); border: 1px solid var(--hair-2); border-radius: 20px;
+    padding: 40px; box-shadow: 0 24px 60px rgba(15,17,23,0.08);
+  }
+  .auth-card h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin: 18px 0 6px; }
+  .auth-card .sub { color: var(--text-3); margin-bottom: 24px; font-size: 14px; }
+  .auth-card label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; color: var(--text-2); }
+  .auth-card input {
+    width: 100%; height: 46px; padding: 0 14px; border-radius: 10px;
+    border: 1px solid var(--hair-2); background: var(--bg);
+    font-size: 14px; font-family: inherit; margin-bottom: 14px;
+  }
+  .auth-card input:focus { outline: none; border-color: var(--navy); }
+  .auth-card .btn { width: 100%; justify-content: center; padding: 14px; margin-top: 8px; }
+  .auth-card .perks { background: var(--bg-2); border-radius: 12px; padding: 16px 18px; margin: 0 0 24px; }
+  .auth-card .perks ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+  .auth-card .perks li { font-size: 13px; color: var(--text-2); display: flex; gap: 8px; }
+  .auth-card .perks li::before { content: '✓'; color: var(--pos); font-weight: 700; }
+  .auth-card .foot { text-align: center; margin-top: 20px; font-size: 13.5px; color: var(--text-3); }
+  .auth-card .foot a { color: var(--navy); font-weight: 600; }
+  .auth-card .terms { font-size: 11.5px; color: var(--text-3); text-align: center; margin-top: 14px; line-height: 1.5; }
+</style>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <a href="index.html" class="brand"><span class="brand-mark"></span><span>Finrock</span></a>
+    <h1>Start your Life OS.</h1>
+    <p class="sub">14-day free trial · no card · cancel anytime.</p>
+    <div class="perks">
+      <ul>
+        <li>Full Life Tracker — 12 tiles</li>
+        <li>AI receipt capture · voice + photo</li>
+        <li>VAT MTD · Self Assessment ready</li>
+        <li>Save £100s/yr on bills (or refund)</li>
+      </ul>
+    </div>
+    <form>
+      <label for="name">Full name</label>
+      <input type="text" id="name" placeholder="James Carter" />
+      <label for="email">Work or personal email</label>
+      <input type="email" id="email" placeholder="you@example.com" />
+      <label for="pw">Choose a password</label>
+      <input type="password" id="pw" placeholder="At least 12 characters" />
+      <button type="submit" class="btn btn-primary">Create account →</button>
+    </form>
+    <p class="terms">By signing up you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy policy</a>.</p>
+    <p class="foot">Already have an account? <a href="login.html">Sign in →</a></p>
+  </div>
+</div>
+</body>
+</html>
