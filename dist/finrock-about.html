@@ -84,7 +84,55 @@ header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); 
   .deskshot > div:first-child { display: none !important }
   .deskshot figcaption, .deskshot + figcaption { margin-top: 0 !important }
 }
+
+/* --- phone: kill horizontal overflow, tighten rhythm --- */
+@media (max-width: 760px) {
+  html, body { overflow-x: hidden !important; max-width: 100vw }
+  section { padding-top: 52px !important; padding-bottom: 52px !important }
+  figure { margin-left: 0 !important; margin-right: 0 !important }
+  p { font-size: 15.5px !important; line-height: 1.55 !important }
+}
 </style>
+<script>
+(function(){
+  var MB = 760;
+  function fix(){
+    var on = window.innerWidth <= MB;
+    var vw = window.innerWidth;
+    document.documentElement.style.overflowX = 'hidden';
+    document.body.style.overflowX = 'hidden';
+    var all = document.body.querySelectorAll('*');
+    for (var i=0;i<all.length;i++){
+      var el = all[i];
+      if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') continue;
+      var cs = getComputedStyle(el);
+      if (!on){ if (el.dataset.rwUndo){ el.style.gridTemplateColumns = el.dataset.rwUndo === '_' ? '' : el.dataset.rwUndo; delete el.dataset.rwUndo; } continue; }
+      /* collapse multi-column grids, but leave narrow grids (inside phone mockups) alone */
+      if (cs.display.indexOf('grid') > -1){
+        var cols = cs.gridTemplateColumns.split(' ').filter(Boolean).length;
+        if (cols > 1 && el.getBoundingClientRect().width > 360){
+          if (!el.dataset.rwUndo) el.dataset.rwUndo = el.style.gridTemplateColumns || '_';
+          el.style.gridTemplateColumns = '1fr';
+        }
+      }
+      /* let wide flex rows wrap instead of squeezing */
+      if (cs.display.indexOf('flex') > -1 && cs.flexDirection.indexOf('row') > -1 && cs.flexWrap === 'nowrap' && el.scrollWidth > vw - 24){
+        el.style.flexWrap = 'wrap';
+      }
+      /* nothing may be wider than the screen */
+      var w = parseFloat(cs.width);
+      if (w > vw - 8 && cs.position !== 'fixed' && !el.closest('[data-phone]')){
+        if (el.style.width && el.style.width.indexOf('px') > -1) el.style.width = '100%';
+        el.style.maxWidth = '100%';
+      }
+    }
+  }
+  var t; function sched(){ clearTimeout(t); t = setTimeout(fix, 60); }
+  if (document.readyState !== 'loading') sched(); else document.addEventListener('DOMContentLoaded', sched);
+  window.addEventListener('load', sched);
+  window.addEventListener('resize', sched);
+})();
+</script>
 </head>
 <body>
 <div style="min-height:100vh;background:#f6f5f1">
