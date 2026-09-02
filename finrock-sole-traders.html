@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Self Assessment, MTD quarterly updates and expenses for sole traders — filed through your own HMRC connection.">
 <meta name="twitter:image" content="https://gofinrock.com/assets/og-card.png">
 <meta name="theme-color" content="#0b0b10">
+<link rel="alternate" type="text/plain" href="https://gofinrock.com/llms.txt" title="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Sole trader accounting and Self Assessment | Finrock","description":"Self Assessment, MTD quarterly updates and expenses for sole traders — filed through your own HMRC connection.","url":"https://gofinrock.com/finrock-sole-traders.html","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -99,7 +100,8 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
   html, body { overflow-x: hidden !important; max-width: 100vw }
   section { padding-top: 52px !important; padding-bottom: 52px !important }
   figure { margin-left: 0 !important; margin-right: 0 !important }
-  p { font-size: 15.5px !important; line-height: 1.55 !important }
+  p:not(.num) { font-size: 15.5px !important; line-height: 1.55 !important }
+  p.num { line-height: 1.05 !important }
 }
 
 /* --- phone header: one clean row, proper menu sheet --- */
@@ -217,7 +219,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
     <h1 class="rv in" style="margin:14px 0 0;max-width:800px;font-size:clamp(36px,4.4vw,58px);line-height:1.03;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance">Stop doing your books on a Sunday night.</h1>
     <p class="rv in" style="margin:20px 0 0;max-width:600px;font-size:17px;line-height:1.62;color:rgba(255,255,255,.66);text-wrap:pretty">The first bookkeeping app you can use one-handed at a petrol station. Voice and photo capture, AI does the coding, and your Self Assessment is ready well before 31 January.</p>
     <div class="rv in" style="display:flex;align-items:center;gap:12px;margin-top:30px;flex-wrap:wrap">
-      <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">Start 14-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+      <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">Start 7-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
       <a href="finrock-pricing.html" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06)">See pricing</a>
     </div>
   </div>
@@ -567,7 +569,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
   <div class="rv" style="max-width:640px">
     <p style="margin:0;font-size:11.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#f6921a">Everything included</p>
     <h2 style="margin:12px 0 0;font-size:clamp(28px,3.4vw,42px);line-height:1.06;letter-spacing:-.035em;font-weight:800">One flat price. No percentage of your revenue.</h2>
-    <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:rgba(21,22,26,.62);text-wrap:pretty">£25/month including VAT, whether you turn over £20k or £200k.</p>
+    <p style="margin:14px 0 0;font-size:16px;line-height:1.62;color:rgba(21,22,26,.62);text-wrap:pretty">From £12.99/month including VAT under the MTD threshold, £24.99 above it — flat, whatever you turn over. No percentage of your revenue.</p>
   </div>
 
   <div class="g3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px">

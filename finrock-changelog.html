@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Every release, fix and new feature in Finrock, newest first.">
 <meta name="twitter:image" content="https://gofinrock.com/assets/og-card.png">
 <meta name="theme-color" content="#0b0b10">
+<link rel="alternate" type="text/plain" href="https://gofinrock.com/llms.txt" title="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Changelog — what is new in Finrock","description":"Every release, fix and new feature in Finrock, newest first.","url":"https://gofinrock.com/finrock-changelog.html","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,7 +98,8 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
   html, body { overflow-x: hidden !important; max-width: 100vw }
   section { padding-top: 52px !important; padding-bottom: 52px !important }
   figure { margin-left: 0 !important; margin-right: 0 !important }
-  p { font-size: 15.5px !important; line-height: 1.55 !important }
+  p:not(.num) { font-size: 15.5px !important; line-height: 1.55 !important }
+  p.num { line-height: 1.05 !important }
 }
 
 /* --- phone header: one clean row, proper menu sheet --- */

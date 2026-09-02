@@ -3,24 +3,25 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Finrock — bookkeeping, tax filing and life admin in one app</title>
-<meta name="description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<title>Finrock — one life, one app. Money, tax and life admin, together</title>
+<meta name="description" content="Every bank you have in one ledger — business and personal. Self Assessment and MTD figures ready to file, every bill and subscription seen, every renewal and document remembered. Built for the UK.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://gofinrock.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Finrock">
-<meta property="og:title" content="Finrock — bookkeeping, tax filing and life admin in one app">
-<meta property="og:description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<meta property="og:title" content="Finrock — one life, one app. Money, tax and life admin, together">
+<meta property="og:description" content="Every bank you have in one ledger — business and personal. Self Assessment and MTD figures ready to file, every bill and subscription seen, every renewal and document remembered. Built for the UK.">
 <meta property="og:url" content="https://gofinrock.com/">
 <meta property="og:image" content="https://gofinrock.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_GB">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Finrock — bookkeeping, tax filing and life admin in one app">
-<meta name="twitter:description" content="Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.">
+<meta name="twitter:title" content="Finrock — one life, one app. Money, tax and life admin, together">
+<meta name="twitter:description" content="Every bank you have in one ledger — business and personal. Self Assessment and MTD figures ready to file, every bill and subscription seen, every renewal and document remembered. Built for the UK.">
 <meta name="twitter:image" content="https://gofinrock.com/assets/og-card.png">
 <meta name="theme-color" content="#0b0b10">
+<link rel="alternate" type="text/plain" href="https://gofinrock.com/llms.txt" title="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Finrock — bookkeeping, tax filing and life admin in one app","description":"Finrock keeps your books, works out what you owe under current UK rules, and files it to HMRC through your own connection — with the receipt.","url":"https://gofinrock.com/","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -120,7 +121,8 @@ details.faq[open] summary .fx { transform: rotate(45deg); background: #1e1b4b; c
   html, body { overflow-x: hidden !important; max-width: 100vw }
   section { padding-top: 52px !important; padding-bottom: 52px !important }
   figure { margin-left: 0 !important; margin-right: 0 !important }
-  p { font-size: 15.5px !important; line-height: 1.55 !important }
+  p:not(.num) { font-size: 15.5px !important; line-height: 1.55 !important }
+  p.num { line-height: 1.05 !important }
 }
 
 /* --- phone header: one clean row, proper menu sheet --- */
@@ -238,15 +240,15 @@ details.faq[open] summary .fx { transform: rotate(45deg); background: #1e1b4b; c
     <div>
       <div class="rv in" style="display:inline-flex;align-items:center;gap:9px;padding:6px 14px 6px 7px;border-radius:9999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);margin-bottom:26px">
         <span style="position:relative;display:inline-flex;width:20px;height:20px;border-radius:9999px;background:#f6921a;align-items:center;justify-content:center"><span aria-hidden="true" style="position:absolute;inset:0;border-radius:9999px;background:#f6921a;animation:fr-pulse 2.6s ease-out infinite"></span><i data-lucide="landmark" style="width:11px;height:11px;color:#140d02;position:relative"></i></span>
-        <span style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82)">Files to HMRC through your own connection — with the receipt</span>
+        <span style="font-size:12.5px;font-weight:600;color:rgba(255,255,255,.82)">Every bank · every kind of income · one ledger</span>
       </div>
-      <h1 class="rv in" style="margin:0;font-size:clamp(46px,5.6vw,82px);line-height:.98;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance">We do the books <span class="grad-txt">and file them.</span></h1>
-      <p class="rv in" style="margin:24px 0 0;max-width:480px;font-size:17.5px;line-height:1.62;color:rgba(255,255,255,.66);text-wrap:pretty">Finrock keeps the books, works out what you owe under current UK rules and submits it to HMRC — no accountant needed. Want one anyway? Add a qualified UK accountant to check and sign it off. And the same app remembers the MOT, the renewal and the passport.</p>
+      <h1 class="rv in" style="margin:0;font-size:clamp(46px,5.6vw,82px);line-height:.98;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance">One life. <span class="grad-txt">One app.</span></h1>
+      <p class="rv in" style="margin:24px 0 0;max-width:480px;font-size:17.5px;line-height:1.62;color:rgba(255,255,255,.66);text-wrap:pretty">Your money doesn’t come in neat halves — salary, dividends, a side income, rent, a pension, the mortgage — yet every app only holds one piece of it. Finrock holds all of it. Every bank you have in one ledger, your tax figures ready when HMRC wants them, every bill and subscription seen, and the MOT, the renewal and the passport remembered in the same place.</p>
       <div class="rv in" style="display:flex;align-items:center;gap:12px;margin-top:34px;flex-wrap:wrap">
         <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:16px 30px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">Get started free <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
         <a href="#how" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88);padding:16px 24px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06);backdrop-filter:blur(8px)">How it works</a>
       </div>
-      <p class="rv in" style="margin:16px 0 0;font-size:12.5px;color:rgba(255,255,255,.45)">Free plan stays free · No card · 14-day trial of paid features · UK &amp; NI</p>
+      <p class="rv in" style="margin:16px 0 0;font-size:12.5px;color:rgba(255,255,255,.45)">Free to start · No card · From £9.99/mo incl. VAT · UK &amp; NI</p>
       <div class="rv in" style="display:flex;gap:36px;margin-top:44px;padding-top:26px;border-top:1px solid rgba(255,255,255,.12);flex-wrap:wrap">
         <div><p class="num" style="margin:0;font-size:24px;color:#fff">7 filings</p><p style="margin:3px 0 0;font-size:12px;color:rgba(255,255,255,.48)">from one ledger</p></div>
         <div><p class="num" style="margin:0;font-size:24px;color:#fff">1 tap</p><p style="margin:3px 0 0;font-size:12px;color:rgba(255,255,255,.48)">to sort a transaction</p></div>

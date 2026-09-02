@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Invoices and quotes with payment links, bills, receipts by photo, and a live VAT position. Books done by the time you reach the van.">
 <meta name="twitter:image" content="https://gofinrock.com/assets/og-card.png">
 <meta name="theme-color" content="#0b0b10">
+<link rel="alternate" type="text/plain" href="https://gofinrock.com/llms.txt" title="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Business bookkeeping, invoices and VAT | Finrock","description":"Invoices and quotes with payment links, bills, receipts by photo, and a live VAT position. Books done by the time you reach the van.","url":"https://gofinrock.com/finrock-business.html","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -105,7 +106,8 @@ header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); 
   html, body { overflow-x: hidden !important; max-width: 100vw }
   section { padding-top: 52px !important; padding-bottom: 52px !important }
   figure { margin-left: 0 !important; margin-right: 0 !important }
-  p { font-size: 15.5px !important; line-height: 1.55 !important }
+  p:not(.num) { font-size: 15.5px !important; line-height: 1.55 !important }
+  p.num { line-height: 1.05 !important }
 }
 
 /* --- phone header: one clean row, proper menu sheet --- */
@@ -223,8 +225,8 @@ header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); 
     <h1 class="rv in" style="margin:14px auto 0;max-width:860px;font-size:clamp(38px,4.6vw,62px);line-height:1.02;letter-spacing:-.045em;font-weight:800;color:#fff;text-wrap:balance">Books done by the time you reach the van.</h1>
     <p class="rv in" style="margin:20px auto 0;max-width:600px;font-size:17px;line-height:1.62;color:rgba(255,255,255,.66);text-wrap:pretty">Bank feed in, one-tap sorting, invoices that chase themselves — posting to a real double-entry ledger your accountant can stand behind. Then file, from the app.</p>
     <div class="rv in" style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap">
-      <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">Start 14-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
-      <a href="finrock-pricing.html" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06)">£25/mo · see pricing</a>
+      <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:linear-gradient(120deg,#f6921a,#fb923c);color:#140d02;font-size:15.5px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 40px rgba(246,146,26,.38)">Start 7-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+      <a href="finrock-pricing.html" style="display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;color:rgba(255,255,255,.88);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.06)">From £12.99/mo · see pricing</a>
     </div>
     <p class="rv in" style="margin:16px 0 0;font-size:12.5px;color:rgba(255,255,255,.45)">Incl. VAT · No card to start · Cancel anytime</p>
   </div>
@@ -823,9 +825,9 @@ header:not(.scrolled) .mbtn { color: #fff; border-color: rgba(255,255,255,.28); 
     <div aria-hidden="true" style="position:absolute;width:520px;height:520px;border-radius:9999px;background:#f6921a;opacity:.15;filter:blur(130px);left:50%;transform:translateX(-50%);bottom:-340px"></div>
     <div style="position:relative">
       <h2 style="margin:0;font-size:clamp(30px,3.6vw,46px);line-height:1.04;letter-spacing:-.04em;font-weight:800">Ten minutes to a live tax figure.</h2>
-      <p style="margin:16px auto 0;max-width:430px;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.66)">Connect a bank, sort a week of transactions, watch the estimate appear. £25/mo incl. VAT when you're ready.</p>
+      <p style="margin:16px auto 0;max-width:430px;font-size:15.5px;line-height:1.6;color:rgba(255,255,255,.66)">Connect a bank, sort a week of transactions, watch the estimate appear. from £12.99/mo incl. VAT when you're ready.</p>
       <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:30px;flex-wrap:wrap">
-        <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:#f6921a;color:#140d02;font-size:15px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 36px rgba(246,146,26,.32)">Start 14-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
+        <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:9px;background:#f6921a;color:#140d02;font-size:15px;font-weight:800;padding:15px 28px;border-radius:14px;box-shadow:0 14px 36px rgba(246,146,26,.32)">Start 7-day trial <i data-lucide="arrow-right" style="width:16px;height:16px"></i></a>
         <a href="finrock-pricing.html" style="font-size:15px;font-weight:600;color:rgba(255,255,255,.85);padding:15px 22px;border-radius:14px;border:1px solid rgba(255,255,255,.20)">Compare plans →</a>
       </div>
     </div>

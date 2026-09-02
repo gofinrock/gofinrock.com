@@ -21,6 +21,7 @@
 <meta name="twitter:description" content="Track side income, sort transactions in minutes and see your tax figure before January.">
 <meta name="twitter:image" content="https://gofinrock.com/assets/og-card.png">
 <meta name="theme-color" content="#0b0b10">
+<link rel="alternate" type="text/plain" href="https://gofinrock.com/llms.txt" title="llms.txt">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Side hustle income and tax made simple | Finrock","description":"Track side income, sort transactions in minutes and see your tax figure before January.","url":"https://gofinrock.com/finrock-side-hustlers.html","inLanguage":"en-GB","isPartOf":{"@type":"WebSite","name":"Finrock","url":"https://gofinrock.com/"},"publisher":{"@type":"Organization","name":"Finrock","url":"https://gofinrock.com/","logo":"https://gofinrock.com/assets/finrock-logo.svg"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -97,7 +98,8 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
   html, body { overflow-x: hidden !important; max-width: 100vw }
   section { padding-top: 52px !important; padding-bottom: 52px !important }
   figure { margin-left: 0 !important; margin-right: 0 !important }
-  p { font-size: 15.5px !important; line-height: 1.55 !important }
+  p:not(.num) { font-size: 15.5px !important; line-height: 1.55 !important }
+  p.num { line-height: 1.05 !important }
 }
 
 /* --- phone header: one clean row, proper menu sheet --- */
@@ -322,7 +324,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
     <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04);transition-delay:60ms">
       <span style="width:44px;height:44px;border-radius:13px;background:rgba(30,27,75,.07);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="landmark" style="width:21px;height:21px;color:#1e1b4b"></i></span>
       <p style="margin:0;font-size:17px;font-weight:700;letter-spacing:-.02em">Self Assessment, filed</p>
-      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">Your SA is built from the real ledger and filed with HMRC — reviewed by a qualified accountant on the Plus plan.</p>
+      <p style="margin:8px 0 0;font-size:14px;line-height:1.6;color:rgba(21,22,26,.62)">Your SA is built from the real ledger and filed with HMRC — reviewed by a qualified accountant if you add the accountant check (+£10/mo)n.</p>
     </div>
     <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:20px;padding:28px;box-shadow:0 1px 2px rgba(15,23,42,.04);transition-delay:120ms">
       <span style="width:44px;height:44px;border-radius:13px;background:rgba(15,124,58,.10);display:flex;align-items:center;justify-content:center;margin-bottom:16px"><i data-lucide="repeat" style="width:21px;height:21px;color:#0f7c3a"></i></span>
@@ -349,7 +351,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
         <span style="display:flex;gap:9px;font-size:14.5px;color:rgba(21,22,26,.70)"><i data-lucide="check" style="width:15px;height:15px;color:#0f7c3a;flex-shrink:0;margin-top:3px"></i>Marketplace or creator income</span>
         <span style="display:flex;gap:9px;font-size:14.5px;color:rgba(21,22,26,.70)"><i data-lucide="check" style="width:15px;height:15px;color:#0f7c3a;flex-shrink:0;margin-top:3px"></i>A side hustle on top of a PAYE job</span>
       </div>
-      <p class="num" style="margin:22px 0 0;font-size:32px">£25<span style="font-size:14px;font-weight:600;color:rgba(21,22,26,.50)">/mo incl. VAT</span></p>
+      <p class="num" style="margin:22px 0 0;font-size:32px">£12.99<span style="font-size:14px;font-weight:600;color:rgba(21,22,26,.50)">/mo incl. VAT · Sole trader · £24.99 above the MTD threshold</span></p>
       <a href="https://app.gofinrock.com/register" class="btn-p" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:#1e1b4b;color:#fff;font-size:14.5px;font-weight:700;padding:13px 24px;border-radius:12px">Start free trial <i data-lucide="arrow-right" style="width:15px;height:15px"></i></a>
     </div>
     <div class="rv card-h" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:22px;padding:32px;transition-delay:70ms">
@@ -361,7 +363,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
         <span style="display:flex;gap:9px;font-size:14.5px;color:rgba(21,22,26,.70)"><i data-lucide="check" style="width:15px;height:15px;color:#0f7c3a;flex-shrink:0;margin-top:3px"></i>Earning enough that incorporating pays</span>
         <span style="display:flex;gap:9px;font-size:14.5px;color:rgba(21,22,26,.70)"><i data-lucide="check" style="width:15px;height:15px;color:#0f7c3a;flex-shrink:0;margin-top:3px"></i>Wants liability separated from personal</span>
       </div>
-      <p class="num" style="margin:22px 0 0;font-size:32px">£35<span style="font-size:14px;font-weight:600;color:rgba(21,22,26,.50)">/mo incl. VAT · Plus</span></p>
+      <p class="num" style="margin:22px 0 0;font-size:32px">£34.99<span style="font-size:14px;font-weight:600;color:rgba(21,22,26,.50)">/mo incl. VAT · Self-employed + accountant</span></p>
       <a href="finrock-pricing.html" class="btn-p" style="display:inline-flex;align-items:center;gap:8px;margin-top:16px;background:#fff;border:1px solid rgba(20,22,28,.16);color:#15161a;font-size:14.5px;font-weight:700;padding:13px 24px;border-radius:12px">Compare plans <i data-lucide="arrow-right" style="width:15px;height:15px"></i></a>
     </div>
   </div>
@@ -393,7 +395,7 @@ label.lb { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: 
     </details>
     <details class="rv" style="background:#fff;border:1px solid rgba(20,22,28,.10);border-radius:16px;padding:20px 24px">
       <summary style="cursor:pointer;font-size:16px;font-weight:700;letter-spacing:-.015em;list-style:none">I missed a few years of Self Assessment. Can you help?</summary>
-      <p style="margin:12px 0 0;font-size:14.5px;line-height:1.65;color:rgba(21,22,26,.64)">Yes. On the Plus plan an accountant can prepare back returns as a voluntary disclosure. There is a one-off fee on top of the subscription — considerably less stressful than HMRC finding it first.</p>
+      <p style="margin:12px 0 0;font-size:14.5px;line-height:1.65;color:rgba(21,22,26,.64)">Yes. With the accountant check added, an accountant can prepare back returns as a voluntary disclosure. There is a one-off fee on top of the subscription — considerably less stressful than HMRC finding it first.</p>
     </details>
   </div>
 </section>
